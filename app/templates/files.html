@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <h1 class="page-header">Files</h1>
+    
+    <h2>Pictures</h2>
+    
+    <ol>
+        {% for pic in gallery %}
+           
+            <li> <img class = "img-rounded"  src = "/static/uploads/{{ pic }}"> </li>
+        {% endfor %}
+        
+    </ol>
+    
+    <h1>Other Files</h1>
+    
+    <ol>
+        {% for name in file_names %}
+            <li> {{ name }} </li>
+        {% endfor %}
+        
+    </ol>
+    
+{% endblock %}
+
+
